@@ -43,5 +43,9 @@ public class UserServiceImp implements IUserService {
         return list;
     }
 
-
+    //查询所有用户
+    @Override
+    public List<UserInfo> findAll() throws Exception{
+        return iUserDao.findAll();
+    }
 }

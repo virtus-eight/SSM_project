@@ -21,4 +21,7 @@ public interface  IUserDao {
             @Result(id = true,property = "roles",column = "id",javaType =List.class,many =@Many(select = "com.zty.ssm.dao.IRoleDao.findRoleByUserId")),
     })
     public UserInfo findByUsername(String username) throws Exception;
+
+    @Select("select * from users")
+    public List<UserInfo> findAll() throws Exception;
 }
