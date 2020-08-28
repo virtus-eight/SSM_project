@@ -1,10 +1,7 @@
 package com.zty.ssm.dao;
 
 import com.zty.ssm.domain.UserInfo;
-import org.apache.ibatis.annotations.Many;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.Results;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,8 +17,11 @@ public interface  IUserDao {
             @Result(id = true,property = "status",column = "status"),
             @Result(id = true,property = "roles",column = "id",javaType =List.class,many =@Many(select = "com.zty.ssm.dao.IRoleDao.findRoleByUserId")),
     })
-    public UserInfo findByUsername(String username) throws Exception;
+    UserInfo findByUsername(String username) throws Exception;
 
     @Select("select * from users")
-    public List<UserInfo> findAll() throws Exception;
+    List<UserInfo> findAll() throws Exception;
+
+    @Insert("insert into users(email,username,password,phoneNum,status) values (#{email},# {username},#{password},#{phoneNum},#{status}")
+    void save(UserInfo userInfo);
 }
