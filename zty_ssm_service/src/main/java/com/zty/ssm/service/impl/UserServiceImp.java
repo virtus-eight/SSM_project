@@ -54,7 +54,7 @@ public class UserServiceImp implements IUserService {
 
     //添加用户
     @Override
-    public void save(UserInfo userInfo) throws Exception {
+    public void save(UserInfo userInfo){
         //对密码进行加密
         String encode = bCryptPasswordEncoder.encode(userInfo.getPassword());
         //将加密后的密码给对象
