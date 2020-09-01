@@ -1,3 +1,13 @@
 .idea
 /zty_ssm.iml
 /out/
+/zty_ssm_utils/zty_ssm_utils.iml
+/zty_ssm_service/zty_ssm_service.iml
+/zty_ssm_domain/zty_ssm_domain.iml
+/zty_ssm_dao/zty_ssm_dao.iml
+/ssm_web/ssm_web.iml
+/ssm_web/target/
+/zty_ssm_service/target/
+/zty_ssm_utils/target/
+/zty_ssm_dao/target/
+/zty_ssm_domain/target/

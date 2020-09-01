@@ -1,2 +1,3 @@
 com\zty\ssm\controller\ProductController.class
+com\zty\ssm\controller\UserController.class
 com\zty\ssm\controller\OrdersController.class

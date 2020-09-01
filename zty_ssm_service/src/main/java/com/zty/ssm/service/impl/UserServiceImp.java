@@ -33,7 +33,7 @@ public class UserServiceImp implements IUserService {
         }
 //      //处理自己用户对象为Userdetails
         //User user=new User(userInfo.getUsername(),"{noop}"+userInfo.getPassword(),getAuthority(userInfo.getRoles()));
-        User user=new User(userInfo.getUsername(),"{noop}"+userInfo.getPassword(),userInfo.getStatus()==0?false:true,true,true,true,getAuthority(userInfo.getRoles()));
+        User user=new User(userInfo.getUsername(),userInfo.getPassword(),userInfo.getStatus()==0?false:true,true,true,true,getAuthority(userInfo.getRoles()));
         return user;
     }
 
@@ -60,5 +60,11 @@ public class UserServiceImp implements IUserService {
         //将加密后的密码给对象
         userInfo.setPassword(encode);
         iUserDao.save(userInfo);
+    }
+
+    @Override
+    public UserInfo findById(String id) throws Exception {
+        UserInfo userInfo=iUserDao.findById(id);
+        return userInfo;
     }
 }
