@@ -15,6 +15,6 @@ public class RoleServiceImp implements RoleService {
     @Override
     public List<Role> findAll() throws Exception {
         List<Role> list= iRoleDao.findAll();
-        return null;
+        return list;
     }
 }
