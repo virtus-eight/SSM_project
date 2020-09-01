@@ -19,4 +19,7 @@ public interface IRoleDao {
     }
     )
     public List<Role> findRoleByUserId(String userId) throws Exception;
+
+    @Select("select * from role")
+    List<Role> findAll() throws Exception;
 }
