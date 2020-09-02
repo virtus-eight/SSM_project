@@ -1,0 +1,11 @@
+package com.zty.ssm.service;
+
+import com.zty.ssm.domain.Permission;
+
+import java.util.List;
+
+public interface IPermissionService {
+    List<Permission> findAll() throws Exception;
+
+    void save(Permission permission) throws Exception;
+}

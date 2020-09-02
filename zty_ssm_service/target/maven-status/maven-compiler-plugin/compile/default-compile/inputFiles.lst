@@ -4,5 +4,7 @@ C:\github\SSM_project\zty_ssm_service\src\main\java\com\zty\ssm\service\impl\IOr
 C:\github\SSM_project\zty_ssm_service\src\main\java\com\zty\ssm\service\IUserService.java
 C:\github\SSM_project\zty_ssm_service\src\main\java\com\zty\ssm\service\impl\RoleServiceImp.java
 C:\github\SSM_project\zty_ssm_service\src\main\java\com\zty\ssm\service\RoleService.java
+C:\github\SSM_project\zty_ssm_service\src\main\java\com\zty\ssm\service\impl\IPermissionServiceImp.java
 C:\github\SSM_project\zty_ssm_service\src\main\java\com\zty\ssm\service\impl\UserServiceImp.java
+C:\github\SSM_project\zty_ssm_service\src\main\java\com\zty\ssm\service\IPermissionService.java
 C:\github\SSM_project\zty_ssm_service\src\main\java\com\zty\ssm\service\IProductService.java

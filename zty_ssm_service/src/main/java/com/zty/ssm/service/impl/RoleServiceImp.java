@@ -17,4 +17,9 @@ public class RoleServiceImp implements RoleService {
         List<Role> list= iRoleDao.findAll();
         return list;
     }
+
+    @Override
+    public void save(Role role) throws Exception {
+        iRoleDao.save(role);
+    }
 }
