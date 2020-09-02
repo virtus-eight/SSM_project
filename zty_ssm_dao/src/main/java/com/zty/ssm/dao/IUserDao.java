@@ -1,5 +1,6 @@
 package com.zty.ssm.dao;
 
+import com.zty.ssm.domain.Role;
 import com.zty.ssm.domain.UserInfo;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Service;
@@ -36,4 +37,11 @@ public interface  IUserDao {
             @Result(id = true,property = "roles",column = "id",javaType =List.class,many =@Many(select = "com.zty.ssm.dao.IRoleDao.findRoleByUserId")),
     })
     UserInfo findById(String id) throws Exception;
+
+
+    @Select("select * from role where id not in (select roleId from users_role where userId=#{userid})")
+    List<Role> findOtherRoles(String userid);
+
+    @Insert("INSERT INTO users_role (userId,roleId) VALUES (#{userId},#{roleId})")
+    void addRoleToUser(@Param("userId") String userId, @Param("roleId")String roleId);
 }
