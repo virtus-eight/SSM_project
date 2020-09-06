@@ -1,7 +1,8 @@
-com\zty\ssm\domain\Traveller.class
-com\zty\ssm\domain\UserInfo.class
-com\zty\ssm\domain\Member.class
-com\zty\ssm\domain\Orders.class
-com\zty\ssm\domain\Product.class
-com\zty\ssm\domain\Permission.class
-com\zty\ssm\domain\Role.class
+com/zty/ssm/domain/Permission.class
+com/zty/ssm/domain/SysLog.class
+com/zty/ssm/domain/Member.class
+com/zty/ssm/domain/Role.class
+com/zty/ssm/domain/Product.class
+com/zty/ssm/domain/UserInfo.class
+com/zty/ssm/domain/Traveller.class
+com/zty/ssm/domain/Orders.class
